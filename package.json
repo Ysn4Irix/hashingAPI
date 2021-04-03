@@ -1,0 +1,21 @@
+{
+  "name": "hashapi",
+  "version": "1.0.0",
+  "description": "A API that return a hashing of a givings string",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "devStart": "nodemon app.js"
+  },
+  "keywords": [
+    "hashing"
+  ],
+  "author": "YsnIrix",
+  "license": "MIT",
+  "dependencies": {
+    "express": "~4.16.1",
+    "express-rate-limit": "^5.2.6",
+    "joi": "^17.4.0"
+  }
+}
