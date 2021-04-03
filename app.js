@@ -5,7 +5,7 @@ const indexRouter = require('./routes/index');
 app.use(express.json());
 app.use('/', indexRouter);
 
-// catch 404 and forward to error handler
+// Catch 404 and forward to error handler
 app.use((req, res, next) => {
     const error = new Error("Request Not Found");
     error.status = 404;
@@ -14,11 +14,11 @@ app.use((req, res, next) => {
 
 // error handler
 app.use((error, req, res, next) => {
-    // set locals, only providing error in development
+    // Set locals, only providing error in development
     res.locals.message = error.message;
     res.locals.error = req.app.get('env') === 'development' ? error : {};
 
-    // send the error message
+    // Send the error message
     res.status(error.status || 400).json({
         error: {
             message: error.message
